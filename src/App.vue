@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <button class="btn">
-    按钮
-  </button>
+<router-view></router-view>
 </template>
 
 <style scoped>
