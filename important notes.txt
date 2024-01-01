@@ -1,0 +1,48 @@
+----------------------## Initalize and installation ###-------------------
+
+visit https://cn.vuejs.org/
+
+npm config get registry --> register the china server
+
+npm config set registry=https://registry.npmmirror.com
+
+after setup above registry , only can use the vite command
+npm init vite@latest shop-admin -- --template vue
+
+install volar extension
+
+install vue3 language extension
+
+install chinese language for vs code extension. 
+
+----------------------## CSS framework ###----------------------------------
+https://element-plus.org/en-US/component/button.html
+npm install element-plus --save --> for css framework
+
+https://cn.windicss.org/
+npm i -D vite-plugin-windicss windicss
+must watch the chapter 2 video
+
+after that need go to vite.config.js to import and export it
+
+go main.js import 'virtual:windi.css'
+
+also install windicss extension at the vs code. 
+
+if too many class on html, remember use @apply
+
+example below.
+.btn {
+  @apply  bg-purple-500 text-indigo-50 px-4 py-2 rounded-full transition-all duration-500 hover:( bg-purple-900) focus:(ring-8 ring-purple-900);
+}
+
+--------------------------## Vue Router### ----------------------------------
+
+https://router.vuejs.org/zh/
+
+
+
+
+
+
+
