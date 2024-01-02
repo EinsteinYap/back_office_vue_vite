@@ -40,6 +40,19 @@ example below.
 
 https://router.vuejs.org/zh/
 
+--------------------------## Element Icons### ----------------------------------
+
+https://element-plus.org/en-US/component/icon.html#register-all-icons
+
+// main.ts
+
+// if you're using CDN, please remove this line.
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
+const app = createApp(App)
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
 
 
 
