@@ -1,33 +1,26 @@
 <template>
     <div>
-        后台首页
-
-        <el-button @click="addCount">
-            {{ count }}
-        </el-button>
-        <el-button @click="addCount2" type="primary">
-            {{ form.count }}
-        </el-button>
-
-        <!-- <HelloWorld /> -->
-        
+        后台首页 
+        <el-button @click="set">设置</el-button>
+        <el-button @click="get">读取</el-button>
+        <el-button @click="remove">删除</el-button>
     </div>
 </template>
-
 <script setup>
-// import HelloWorld from '~/components/HelloWorld.vue'
-import { ref,reactive } from 'vue'
-let count =ref(1) 
+    import { useCookies } from '@vueuse/integrations/useCookies'
+    const cookie = useCookies()
 
-function addCount(){
-    count.value ++
-}
+    console.log(cookie);
 
-const form = reactive({
- count :2
-})
+    function set(){
+        cookie.set("admin-token","1232456")
+    }
 
-function addCount2(){
-    form.count ++
-}
+    function get(){
+        console.log(cookie.get("admin-token"));
+    }
+
+    function remove(){
+        cookie.remove("admin-token")
+    }
 </script>
