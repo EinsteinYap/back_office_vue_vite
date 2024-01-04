@@ -1,3 +1,6 @@
+backend API 
+https://dishaxy.dishait.cn/shopadminapi
+
 ----------------------## Initalize and installation ###-------------------
 
 visit https://cn.vuejs.org/
@@ -54,7 +57,19 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
 
+--------------------------## Vue Use### ----------------------------------
 
+vueuse.org
+
+search for cookies
+
+npm i @vueuse/integrations
+
+npm i universal-cookie@^6
+
+after that import it at the index.vue or other page u need
+
+import { useCookies } from '@vueuse/integrations/useCookies'
 
 
 
