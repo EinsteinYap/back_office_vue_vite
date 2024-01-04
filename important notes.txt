@@ -72,5 +72,10 @@ after that import it at the index.vue or other page u need
 import { useCookies } from '@vueuse/integrations/useCookies'
 
 
+--------------------------## Axios intercepter ### ----------------------------------
+
+www.axios-js.com
+
+http://www.axios-js.com/zh-cn/docs/#拦截器
 
 
