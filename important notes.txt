@@ -85,8 +85,8 @@ npm install vuex@next
 
 --------------## Vue Router Guard as permission.js ### -----------------
 
-
-
+--------------## n Progress ### -----------------
+npm i nprogress --> for the global loading on top progress
 
 
 

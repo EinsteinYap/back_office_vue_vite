@@ -1,10 +1,16 @@
 import router from "~/router"
 import { getToken } from "~/composables/auth"
-import { toast } from "~/composables/util"
+import { 
+    toast,
+    showFullLoading,
+    hideFullLoading
+} from "~/composables/util"
 import store from "./store"
 
 // 全局前置守卫
 router.beforeEach(async (to,from,next)=>{
+    // 显示loading
+    showFullLoading()
 
     const token = getToken()
 
@@ -25,5 +31,12 @@ router.beforeEach(async (to,from,next)=>{
         await store.dispatch("getinfo")
     }
 
+    // 设置页面标题
+    let title = (to.meta.title ? to.meta.title : "") + "-帝莎编程商城后台"
+    document.title = title
+
     next()
 })
+
+// 全局后置守卫
+router.afterEach((to, from) => hideFullLoading())
