@@ -72,7 +72,7 @@ after that import it at the index.vue or other page u need
 import { useCookies } from '@vueuse/integrations/useCookies'
 
 
---------------------------## Axios intercepter ### ----------------------------------
+--------------------------## Axios intercepter ### -------------------
 
 www.axios-js.com
 
@@ -81,6 +81,12 @@ http://www.axios-js.com/zh-cn/docs/#拦截器
 --------------------------## VueX ### ----------------------------------
 if vue 2, download vuex 3.x if vue 3, download vuex 4.x
 npm install vuex@next
+
+
+--------------## Vue Router Guard as permission.js ### -----------------
+
+
+
 
 
 
