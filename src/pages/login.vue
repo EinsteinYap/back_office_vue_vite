@@ -37,14 +37,11 @@
 </template>
 
 <script setup>
-import { ref,reactive } from 'vue'
+import { ref,reactive,onMounted,onBeforeUnmount } from 'vue'
 import { toast } from '~/composables/util'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
-import { login,getinfo } from '~/api/manager'
-import {
-  setToken
-} from '~/composables/auth'
+
 const store = useStore()
 const router = useRouter()
 
@@ -80,32 +77,29 @@ const onSubmit = () => {
         }
         loading.value = true
         
-        login(form.username,form.password)
-        .then(res=>{
-            console.log(res);
-
-            // 提示成功
+        store.dispatch("login",form).then(res=>{
             toast("登录成功")
-
-            // 存储token
-            setToken(res.token)
-
-            // 获取用户相关信息
-            getinfo().then(res2=>{
-                store.commit("SET_USERINFO",res2)
-                console.log(res2);
-            })
-
-            // 跳转到后台首页
             router.push("/")
-        })
-        .finally(()=>{
+        }).finally(()=>{
             loading.value = false
         })
-
-
     })
 }
+
+// 监听回车事件
+function onKeyUp(e){
+    if(e.key == "Enter") onSubmit()
+}
+
+// 添加键盘监听
+onMounted(()=>{
+    document.addEventListener("keyup",onKeyUp)
+})
+// 移除键盘监听
+onBeforeUnmount(()=>{
+    document.removeEventListener("keyup",onKeyUp)
+})
+
 </script>
 
 <style scoped>
