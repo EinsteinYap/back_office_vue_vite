@@ -1,3 +1,6 @@
+full website demo
+shopadmin.dishawang.com
+
 backend API 
 https://dishaxy.dishait.cn/shopadminapi
 
@@ -129,4 +132,13 @@ chart resize function
 const el = ref(null)
 useResizeObserver(el, (entries) => myChart.resize())
 
- 
+ ----------------- v-permission !important--------------------
+
+example at the main -->  index.vue
+
+course 5-9 very advance custom v-permission directive
+
+view demo ->  http://shopadmin.dishawang.com/#/access/list
+ <IndexChart v-permission="['getStatistics3,GET']"/>
+
+
