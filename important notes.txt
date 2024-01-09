@@ -111,3 +111,22 @@ watch course 4-12 根据菜单动态添加路由
 course 5-3
 npm install gsap
 is about the number when loading the number got animation. the component is CounTo.vue
+
+
+----------------- echarts installation --------------------
+course 5-5 go visit https://echarts.apache.org/examples/en/index.html, many examples charts 
+npm install echarts
+
+course 5-6 bug of after build production 
+
+onBeforeUnmount(()=>{
+    if(myChart) echarts.dispose(myChart)
+})
+
+must destroy after leave page
+
+chart resize function
+const el = ref(null)
+useResizeObserver(el, (entries) => myChart.resize())
+
+ 
