@@ -88,5 +88,20 @@ npm install vuex@next
 --------------## n Progress ### -----------------
 npm i nprogress --> for the global loading on top progress
 
+--------------------- ## add dynamic title on tab --------------------
+use the meta in the route index.js file. 
 
+----------------- add dynamic routes !important --------------------
+watch course 4-12 根据菜单动态添加路由
 
+----------------- keep alive examples !important --------------------
+ <el-main>
+                <f-tag-list/>
+                <router-view v-slot="{ Component }">
+                 <transition name="fade"> advance transition ----> course 4-20  important 
+                        <keep-alive :max="10">
+                            <component :is="Component"></component>
+                        </keep-alive>
+                    </transition>
+                </router-view>
+            </el-main>
