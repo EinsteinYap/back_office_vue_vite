@@ -105,3 +105,9 @@ watch course 4-12 根据菜单动态添加路由
                     </transition>
                 </router-view>
             </el-main>
+
+
+----------------- animation dependency --------------------
+course 5-3
+npm install gsap
+is about the number when loading the number got animation. the component is CounTo.vue
