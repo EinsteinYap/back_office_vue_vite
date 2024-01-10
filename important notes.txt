@@ -141,4 +141,7 @@ course 5-9 very advance custom v-permission directive
 view demo ->  http://shopadmin.dishawang.com/#/access/list
  <IndexChart v-permission="['getStatistics3,GET']"/>
 
-
+ ----------------- windowHeights and scroll !important--------------------
+course 6-1 --very impoprtant to settle scroll overflow
+const windowHeight = window.innerHeight || document.body.clientHeight
+const h = windowHeight - 64 - 44 - 40
