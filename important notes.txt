@@ -145,3 +145,11 @@ view demo ->  http://shopadmin.dishawang.com/#/access/list
 course 6-1 --very impoprtant to settle scroll overflow
 const windowHeight = window.innerHeight || document.body.clientHeight
 const h = windowHeight - 64 - 44 - 40
+
+course 6-2 <span class="truncate"> --> reduce the string to  .....
+
+ ----------------- pagination !important----------------------------------
+course 6-4 to 6-5 
+this course very important
+
+element plus having pagination 
