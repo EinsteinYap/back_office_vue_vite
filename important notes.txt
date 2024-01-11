@@ -1,3 +1,7 @@
+general rules = some time you need to click.stop to prevent deep click event.
+		some time u need use <span> cover it to prevent other event.
+		--> course 7-1 <span @click.stop="()=>{}"></span>
+
 full website demo
 shopadmin.dishawang.com
 
@@ -153,3 +157,8 @@ course 6-4 to 6-5
 this course very important
 
 element plus having pagination 
+
+ ----------------- image upload !important----------------------------------
+
+image upload course 6-13
+
