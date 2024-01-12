@@ -1,7 +1,8 @@
 general rules = some time you need to click.stop to prevent deep click event.
 		some time u need use <span> cover it to prevent other event.
 		--> course 7-1 <span @click.stop="()=>{}"></span>
-	      = watch course 8-1 for dynamic route queries function	
+	      = watch course 8-1 for dynamic route queries function
+	      = <h1 class ="!m-0 "> this meaning the class  !important
 
 full website demo
 shopadmin.dishawang.com
@@ -162,4 +163,21 @@ element plus having pagination
  ----------------- image upload !important----------------------------------
 
 image upload course 6-13
+
+ ----------------- modelValue image upload !important----------------------------------
+how to specific upload a selected image course 8-5 and course 8-6 with modelValue
+example below
+const props = defineProps({
+    modelValue:[String,Array],
+    limit:{
+        type:Number,
+        default:1
+    },
+    preview:{
+        type:Boolean,
+        default:true
+    }
+})
+const emit = defineEmits(["update:modelValue"])
+
 
