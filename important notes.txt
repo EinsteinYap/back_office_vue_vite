@@ -1,6 +1,7 @@
 general rules = some time you need to click.stop to prevent deep click event.
 		some time u need use <span> cover it to prevent other event.
 		--> course 7-1 <span @click.stop="()=>{}"></span>
+	      = watch course 8-1 for dynamic route queries function	
 
 full website demo
 shopadmin.dishawang.com
